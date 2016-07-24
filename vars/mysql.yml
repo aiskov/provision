@@ -1,9 +1,9 @@
 ---
 mysql:
   user: root
-  pass: BWBqqpTMkxgxte4acRTtYTveVr4Arh8xst64n27zE4cF5KcuEIDS5ydJ9cjcL25Sg8kx0Boou1Wp7OtMgxKgGgv7NpFX5Tbo1CHB
+  pass: BWBqqpTMkxgxte4acRTtYTveVr4Arh8xst64n27zE4cF5KcuEIDS5ydJ9cjcL2
 
-  root_pass: BWBqqpTMkxgxte4acRTtYTveVr4Arh8xst64n27zE4cF5KcuEIDS5ydJ9cjcL25Sg8kx0Boou1Wp7OtMgxKgGgv7NpFX5Tbo1CHB
+  root_pass: BWBqqpTMkxgxte4acRTtYTveVr4Arh8xst64n27zE4cF5KcuEIDS5ydJ9cjcL2
 
   version: 5.6
 

@@ -1,0 +1,16 @@
+- hosts: all
+  sudo: yes
+
+  vars_files:
+    - ../vars/mysql.yml
+
+  vars:
+     mysql_script: ../files/mysql/unbind-root.sql
+
+  tasks:
+    - include: ../tasks/mysql-script.yml
+
+    - name: MySQL | Restart server
+      service:
+        name: mysql
+        state: restarted

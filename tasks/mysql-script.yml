@@ -1,0 +1,14 @@
+---
+- name: MySQL Script | Upload
+  copy:
+      src: "{{mysql_script}}"
+      dest: "/vagrant/script.sql"
+
+- name: MySQL Script | Run
+  mysql_db:
+    name: "mysql"
+    login_user: "root"
+    login_password: "{{mysql.root_pass}}"
+    login_port: "{{mysql.port}}"
+    target: "/vagrant/script.sql"
+    state: import
