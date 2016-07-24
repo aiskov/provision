@@ -7,5 +7,7 @@
   tasks:
     - include: ../tasks/mongodb.yml
 
-  handlers:
-    - include: ../handlers/mongodb.yml
+    - name: MongoDB | Restart server
+      service:
+        name: mongod
+        state: restarted

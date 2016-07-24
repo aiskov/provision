@@ -7,5 +7,7 @@
   tasks:
     - include: ../tasks/mysql.yml
 
-  handlers:
-    - include: ../handlers/mysql.yml
+    - name: MySQL | Restart server
+      service:
+        name: mysql
+        state: restarted
