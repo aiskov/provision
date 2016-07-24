@@ -1,0 +1,5 @@
+---
+mongodb:
+  key: EA312927
+  version: 3.2
+  unbind: Yes

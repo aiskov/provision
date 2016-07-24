@@ -1,0 +1,22 @@
+---
+- name: MongoDB | Add repository key
+  shell: "apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv {{mongodb.key}}"
+
+- name: MongoDB | Add repository
+  shell: "echo \"deb http://repo.mongodb.org/apt/ubuntu \"$(lsb_release -sc)\"/mongodb-org/{{mongodb.version}} multiverse\" | sudo tee /etc/apt/sources.list.d/mongodb-org-{{mongodb.version}}.list"
+
+- name: MongoDB | Update repository index
+  apt:
+    update_cache: "yes"
+
+- name: MongoDB | Install packages
+  apt:
+    name: mongodb-org
+
+- name: MongoDB | Unbind
+  lineinfile:
+    dest: /etc/mongod.conf
+    state: absent
+    regexp: "bind.*"
+  when: mongodb.unbind
+  notify: MongoDB | Restart server

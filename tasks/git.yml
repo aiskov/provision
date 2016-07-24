@@ -1,0 +1,25 @@
+---
+- name: GIT | Install git
+  apt:
+    name: git
+
+- name: GIT | Copy private key
+  copy:
+    src: "{{git_key.private_src}}"
+    dest: "{{git_key.private_dest}}"
+    mode: 0600
+  tags:
+    - key
+
+- name: GIT | Copy public key
+  copy:
+    src: "{{git_key.public_src}}"
+    dest: "{{git_key.public_dest}}"
+    mode: 0600
+  tags:
+    - key
+
+- name: GIT | Install git
+  apt:
+    name: git
+
