@@ -1,0 +1,12 @@
+---
+mysql:
+  user: root
+  pass: BWBqqpTMkxgxte4acRTtYTveVr4Arh8xst64n27zE4cF5KcuEIDS5ydJ9cjcL25Sg8kx0Boou1Wp7OtMgxKgGgv7NpFX5Tbo1CHB
+
+  root_pass: BWBqqpTMkxgxte4acRTtYTveVr4Arh8xst64n27zE4cF5KcuEIDS5ydJ9cjcL25Sg8kx0Boou1Wp7OtMgxKgGgv7NpFX5Tbo1CHB
+
+  version: 5.6
+
+  port: 3306
+  socket: /var/run/mysqld/mysqld.sock
+  pid: /var/run/mysqld/mysqld.pid
