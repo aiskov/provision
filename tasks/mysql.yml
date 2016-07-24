@@ -15,7 +15,7 @@
 
 - name: MySQL | Change config
   template:
-    src: ../templates/mysql/my.cnf.j2
+    src: ../templates/mysql.cnf.j2
     dest: /etc/mysql/my.cnf
   notify: MySQL | Restart database
 

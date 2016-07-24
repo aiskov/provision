@@ -1,0 +1,11 @@
+- hosts: all
+  sudo: yes
+
+  vars_files:
+    - ../vars/mysql.yml
+
+  tasks:
+    - include: ../tasks/mysql.yml
+
+  handlers:
+    - include: ../handlers/mysql.yml
